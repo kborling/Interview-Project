@@ -4,7 +4,7 @@ $(document).ready( function() {
 	var progressbar = $("#progressbar"),
         bar         = progressbar.find('.uk-progress-bar'),
         settings    = {
-        action: '/uploads/', // upload url
+        action: '../uploads/', // upload url
         allow : '*.(jpg|gif|png)', // allow only images
         loadstart: function() {
             bar.css("width", "0%").text("0%");
@@ -19,7 +19,7 @@ $(document).ready( function() {
             setTimeout(function(){
                 progressbar.addClass("uk-hidden");
             }, 250);
-            alert("Upload Completed")
+            alert("Upload Completed") // REMOVE
         }
     };
     var select = $.UIkit.uploadSelect($("#upload-select"), settings),

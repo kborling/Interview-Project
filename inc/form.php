@@ -1,4 +1,4 @@
-        <form class="uk-form-stacked" method="post" action="index.php">
+        <form class="uk-form-stacked" method="post" action="results.php">
             <fieldset data-uk-margin>
 
                 <div class="uk-form-row">
@@ -119,7 +119,7 @@
                 </div>
 
                 <div class="uk-form-row">
-                    <div id="upload-drop" class="uk-placeholder">
+                    <div id="upload-drop" class="uk-placeholder" name="img">
                         <i class="uk-icon-cloud-upload uk-icon-medium uk-text-muted uk-margin-small-right"></i> Attach your featured image by dropping it here or by <a class="uk-form-file">choosing one<input id="upload-select" type="file"></a>.
                     </div>
                     <div id="progressbar" class="uk-progress uk-hidden">

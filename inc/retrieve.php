@@ -26,7 +26,7 @@ function get_all_submissions() {
  * Fetches the results from the database based on the city selected from the city dropdown menu
  * Returns array of each user upload including name, city and featured image
  */
-function get_city_submissions($city) {
+function get_city_submissions($user) {
     require(ROOT_PATH . "inc/database.php");
 
     try {
@@ -34,7 +34,7 @@ function get_city_submissions($city) {
                 SELECT name, city, img
                 FROM userdata
                 WHERE city LIKE ?");
-        $results->bindValue(1,"%" . $city . "%");
+        $results->bindValue(1,"%" . $user->city . "%");
         $results->execute();
     } catch (Exception $e) {
         echo "Error: Data could not be retrieved from the database.";
