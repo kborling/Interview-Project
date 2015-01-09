@@ -120,13 +120,13 @@
 
                 <div class="uk-form-row">
                     <div id="upload-drop" class="uk-placeholder">
-                        <i class="uk-icon-cloud-upload uk-icon-medium uk-text-muted uk-margin-small-right"></i> Attach binaries by dropping them here or <a class="uk-form-file">selecting one<input id="upload-select" type="file"></a>.
+                        <i class="uk-icon-cloud-upload uk-icon-medium uk-text-muted uk-margin-small-right"></i> Attach your featured image by dropping it here or by <a class="uk-form-file">choosing one<input id="upload-select" type="file"></a>.
                     </div>
                     <div id="progressbar" class="uk-progress uk-hidden">
                         <div class="uk-progress-bar" style="width: 0%;">...</div>
                     </div>
                 </div>
-                
+
                 <div class="uk-form-row">
                     <input class="uk-button uk-button-large uk-button-primary" type="submit" value="Submit" data-wait="Please wait..." data-uk-button></input>
                 </div>

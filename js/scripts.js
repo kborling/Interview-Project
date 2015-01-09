@@ -4,7 +4,7 @@ $(document).ready( function() {
 	var progressbar = $("#progressbar"),
         bar         = progressbar.find('.uk-progress-bar'),
         settings    = {
-        action: '/uploads', // upload url
+        action: '/uploads/', // upload url
         allow : '*.(jpg|gif|png)', // allow only images
         loadstart: function() {
             bar.css("width", "0%").text("0%");
