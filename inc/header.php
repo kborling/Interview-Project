@@ -5,7 +5,9 @@
         <title>Project | <?php echo $pageTitle; ?></title>
         <meta name="description" content="Interview Project" />
         <link rel="stylesheet" href="css/uikit.min.css" />
+        <link rel="stylesheet" href="css/form-file.min.css" />
+        <link rel="stylesheet" href="css/form-select.min.css" />
         <link rel="stylesheet" href="css/styles.css" />
         <link rel="icon" type="image/png" href="./img/favicon.ico">
-    </head>   
+    </head>
     <body>
