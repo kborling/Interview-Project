@@ -14,7 +14,6 @@ function insert_submission ($user) {
 		echo "Error: Data could not be inserted into the database.";
         exit;
 	}
-	echo "Successful submission!";
 } // End insert_submission
 
 ?>

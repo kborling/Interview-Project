@@ -1,24 +1,20 @@
 <?php
 
-//$statement = "SELECT name, city, img FROM userdata";
-
 /*
  * Fetches all of the results from the database
  * Returns array of each user upload including name, city and featured image
  */
 function get_all_submissions() {
-	require(ROOT_PATH . "inc/database.php");
+	//require(ROOT_PATH . "inc/database.php");
+    require("./inc/database.php");
 
 	try {
-		$results = $db->prepare("
-			SELECT name, city, img
-			FROM userdata");
+		$results = $db->query("SELECT name, phone, zip, city FROM userdata");
 	} catch (Exception $e) {
 		echo "Error: Data could not be retrieved from the database.";
         exit;
 	}
 	$matches = $results->fetchAll(PDO::FETCH_ASSOC);
-
     return $matches;
 } // End get_all_submissions
 
@@ -27,13 +23,11 @@ function get_all_submissions() {
  * Returns array of each user upload including name, city and featured image
  */
 function get_city_submissions($user) {
-    require(ROOT_PATH . "inc/database.php");
+    //require(ROOT_PATH . "inc/database.php");
+    require("./inc/database.php");
 
     try {
-        $results = $db->prepare("
-                SELECT name, city, img
-                FROM userdata
-                WHERE city LIKE ?");
+        $results = $db->query("SELECT name, phone, zip, city FROM userdata WHERE city LIKE ?");
         $results->bindValue(1,"%" . $user->city . "%");
         $results->execute();
     } catch (Exception $e) {

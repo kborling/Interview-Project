@@ -1,7 +1,7 @@
 <?php
-
+/*
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-	echo "Submitted Data!";
+
     $first = trim($_POST["first"]);
     $last = trim($_POST["last"]);
     $phone = trim($_POST["phone"]);
@@ -24,25 +24,35 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 		require_once("./inc/insert.php");
 		// Concatenate name and address fields
 		$name = $first . " " . $last;
-		$address = $address1 . ", " . $address2;
+
+		if(!isset($address2))
+			$address = $address1 . ", " . $address2;
+		else
+			$address = $address1;
 		// Create user object with collected data
 		$user = new User($name, $phone, $email, $address, $zip, $city, $state, $img);
 
-		echo var_dump(get_object_vars($user)); // Remove
+		//echo var_dump(get_object_vars($user)); // Remove
 		// Insert user object into database
 		insert_submission($user);
 	}
 
 } // End POST
 
-//TODO: Retrieve all submissions from database. Add dropdown to sort based on city.
+*/
 
+//TODO: Retrieve all submissions from database. Add dropdown to sort based on city.
 
 $pageTitle = "Results";
 
-include("./inc/header.php"); ?>
+include("./inc/header.php"); 
 
+require_once("./inc/retrieve.php");
 
+$submissions = get_all_submissions();
 
+include("./inc/submissions.php");
+
+?>
 
 <?php include("./inc/footer.php"); ?>
