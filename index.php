@@ -80,9 +80,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 $pageTitle = "Upload";
 
 include("./inc/header.php"); ?>
-
-    <section class="info">
-        <?php include('./inc/form.php'); ?>
-    </section>
-
+		<div class="uk-height-1-1">
+			<section class="uk-vertical-align uk-text-center uk-height-1-1">
+				<h2>Upload Your Featured Image!</h2>
+				<div class="uk-vertical-align-middle">
+				    <?php include('./inc/form.php'); ?>
+			    </div>
+			</section>
+		</div>
 <?php include("./inc/footer.php"); ?>

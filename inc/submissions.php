@@ -19,25 +19,33 @@ if (empty($submissions)) {
 }
 else { 
 	$cities = populate_dropdown(); ?>
-	<!-- Dropdown for city selection -->
-	<h2>Filter By City</h2>
-	<form method="get" action"">
-		<select name="cities">
-			<option selected disabled>Choose City</option>
-			<option value="all">All Cities</option>
-			<?php foreach($cities as $city) { ?>
-				<option value="<?php echo $city["city"]; ?>"><?php echo $city["city"]; ?> </option>
-			<?php } ?>
-		</select>
-		<input type="submit" value="submit" />
-	</form>
-	<?php
-	foreach($submissions as $submission) { ?>
-		<p><?php echo $submission["created_at"];?></p>
-		<p><?php echo $submission["name"];?></p>
-		<p><?php echo $submission["phone"];?></p>
-		<p><?php echo $submission["city"];?></p>
-		<p><?php echo $submission["zip"];?></p>
-		<img src="<?php echo $submission["img"]; ?>" alt="<?php echo $submission["name"]; ?>">
-	<?php } 
-} // End else ?>
+	<section class="uk-width-1-1">
+		<!-- Dropdown for city selection -->
+		<div class="uk-panel uk-panel-box">
+			<h3 class="uk-panel-title">Filter By City</h3>
+			<form class="uk-form uk-form-stacked" method="get" action"">
+				<select name="cities">
+					<option selected disabled>Choose City</option>
+					<option value="all">All Cities</option>
+					<?php foreach($cities as $city) { ?>
+						<option value="<?php echo $city["city"]; ?>"><?php echo $city["city"]; ?> </option>
+					<?php } ?>
+				</select>
+				<button class="uk-button uk-button-primary" type="submit">Submit</button>
+			</form>
+		</div>
+	</section>
+	<section class="uk-width-1-1">
+		<h2>Featured Images</h2>
+		<?php
+		foreach($submissions as $submission) { ?>
+			<div class="uk-thumbnail uk-thumbnail-small results">
+				<img src="<?php echo $submission["img"]; ?>" alt="<?php echo $submission["name"]; ?>">
+				<div class="uk-thumbnail-caption">
+					<p><?php echo $submission["name"];?></p>
+					<p><?php echo $submission["city"];?></p>
+				</div>
+			</div>
+		<?php } ?>
+	</section>
+<?php } // End else ?>
