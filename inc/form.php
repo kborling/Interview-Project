@@ -90,10 +90,15 @@
                     </select>
                 </div>
                 <div class="uk-form-row uk-text-left">
+                    <label for="featured">Featured Image</label>
+                </div>
+                <div class="uk-form-row uk-text-left">
                     <input type="hidden" name="MAX_FILE_SIZE" value="2000000"></input>
                     <input id="upload-select" type="file" id="upload" name="upload"></input>
                 </div>
-
+                <div class="uk-form-row uk-text-left">
+                    <span class="uk-text-small">File Size must be smaller than 2MB</span>
+                </div>
                 <div class="uk-form-row uk-text-right">
                     <button class="uk-button uk-button-primary" type="submit" data-wait="Please wait..." data-uk-button>Submit</button>
                 </div>

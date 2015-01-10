@@ -1,1 +1,0 @@
-INSERT INTO `userdata` (`name`, `phone`, `email`, `address`, `zip`, `city`, `state`, `img`, `created_at`) VALUES('Gnilrob Nivek', '(444)444-4444', 'email@yahoo.com', '555 Happy Lane', 99223, 'Spokane' , 'WA', '/img/test.png' , '12:00PM January 7th, 2015');

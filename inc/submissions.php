@@ -13,9 +13,14 @@ if($_SERVER["REQUEST_METHOD"] == "GET" && isset($_GET['cities'])) {
 else {
 	$submissions = get_all_submissions();
 }
-if (empty($submissions)) {
-	echo "Sorry, there aren't any submissions!";
-	//TODO: Send user to upload page.
+if (empty($submissions)) { ?>
+	<section class="uk-width-1-1">
+		<div class="uk-panel uk-panel-box">
+			<h3>Sorry, there aren't any submissions</h3>
+			<a href="./index.php">Upload Your Submission</a>
+		</div>
+	</section>
+<?php
 }
 else { 
 	$cities = populate_dropdown(); ?>
