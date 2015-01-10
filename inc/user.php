@@ -2,8 +2,7 @@
 
 class User {
 	
-	public $img = "./img/default.png";
-	public $name = "name", $phone = "(555) 555-5555", $email = "mrrr@gmail.com", $address= "whatever add", $zip = "55555", $city = "somewhere", $state = "ST";
+	public $img = '/img/default.png';
 
 	function __construct ($name, $phone, $email, $address, $zip, $city, $state, $img) {
 		$this->name = $name;
